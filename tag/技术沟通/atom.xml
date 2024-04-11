@@ -7,30 +7,30 @@
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
-    <category term="大一暑假" />
-    <category term="技术沟通" />
-    <category term="课程笔记" />
-    <category term="大三秋冬" />
     <category term="大一秋冬" />
-    <category term="大二春夏" />
+    <category term="大一暑假" />
     <category term="大二秋冬" />
-    <category term="计算机动画" />
+    <category term="大二春夏" />
     <category term="计算机系统" />
+    <category term="课程笔记" />
+    <category term="技术沟通" />
+    <category term="大三秋冬" />
+    <category term="计算机动画" />
     <entry>
         <id>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
         <title>技术沟通笔记</title>
         <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/1%20%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/&#34;&gt;文献检索&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/2%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/&#34;&gt;文献阅读&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/3%20%E6%96%87%E7%8C%AE%E7%BB%BC%E8%BF%B0/&#34;&gt;文献综述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/4%20%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E7%BB%93%E6%9E%84/&#34;&gt;技术文档的结构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/5%20%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E8%AF%AD%E8%A8%80/&#34;&gt;技术文档的语言&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/6%20%E6%BC%94%E7%A4%BA%E6%96%B9%E6%B3%95/&#34;&gt;演示方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/1%20%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/&#34;&gt;文献检索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/2%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/&#34;&gt;文献阅读&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/3%20%E6%96%87%E7%8C%AE%E7%BB%BC%E8%BF%B0/&#34;&gt;文献综述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/4%20%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E7%BB%93%E6%9E%84/&#34;&gt;技术文档的结构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/5%20%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E8%AF%AD%E8%A8%80/&#34;&gt;技术文档的语言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/6%20%E6%BC%94%E7%A4%BA%E6%96%B9%E6%B3%95/&#34;&gt;演示方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="技术沟通" />
         <category term="课程笔记" />
+        <category term="技术沟通" />
         <category term="大三秋冬" />
         <updated>2023-11-25T03:50:14.000Z</updated>
     </entry>
