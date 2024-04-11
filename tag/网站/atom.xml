@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://howjul.github.io</id>
+    <title>HowJul&#39;s Garden • Posts by &#34;网站&#34; tag</title>
+    <link href="https://howjul.github.io" />
+    <updated>2024-04-11T02:51:53.000Z</updated>
+    <category term="网站" />
+    <category term="课程总结" />
+    <category term="大一春夏" />
+    <category term="大一暑假" />
+    <category term="大一秋冬" />
+    <category term="大二春夏" />
+    <category term="大二秋冬" />
+    <category term="计算机动画" />
+    <category term="课程笔记" />
+    <category term="大三秋冬" />
+    <category term="计算机系统" />
+    <category term="技术沟通" />
+    <entry>
+        <id>https://howjul.github.io/2024/04/11/maupassant/</id>
+        <title>新的开始</title>
+        <link rel="alternate" href="https://howjul.github.io/2024/04/11/maupassant/"/>
+        <content type="html">&lt;p&gt;咳咳，这是第三个hexo主题了，笑死，前两个都已经废弃了，一个是matery的主题，一个NexT主题。更换的起因都是网页加载太慢了，从开始的hexo-theme-matery，华丽是真的华丽，但是要设置的东西太多了，而且加载图片实再是太慢了，而且创建了半年也没发一条博客，服了我自己。然后，以计算机学院的网站大赛为契机，我决定改成稍微简约一点的主题，选择NexT是因为他比较简约，而且用的人感觉是最多的，网上一搜教程大大滴有，各种花里胡哨的组件也多，所以就花了好久移植到了NexT。在这个时期为了让我的网站显得好看一点，还是写了几篇博客，好吧，其实就是把我自己的笔记移到了博客上咳咳咳……接下来，博客网站又荒废了，而我的&lt;a href=&#34;https://note.zhz.zone/&#34;&gt;笔记网站&lt;/a&gt;倒是写了好多的内容，特别是因为我最近在读文献入门AI，笔记真的是写了一大堆。当然，最近有向语雀发展的趋势，因为语雀实再是比较方便，而且不用管图片啥的，而且样式确实是好看很多啊，之后的笔记应该是mkdocs和语雀混用了。好了，这几天，刚好日记记录了六周年了，想着发一下朋友圈庆祝一下，顺便安利一下我的网站（刚好域名还有十天也快到期了，换个新域名），结果昨天看了一下自己的NexT，结果侧边栏根本写不出来，我真的是服了，感觉这个也不是很简约，放在手机里根本加载不出来，就想着是不是找个教程给自己的网站加加速。找着找着，咳咳，发现这个主题不错，就又移过来了，然后昨天原来是要看论文的，又搁置了啊啊啊啊啊啊啊，服了我自己了，不过移植的速度还是挺快的，大概三四个小时就差不多好了，这下，这个主题，应该是能用好久了…..吧。从原来的华丽，到现在越来越简约了，我是变成熟了嘛，明明只有一年的时间，审美变化好大，笑死。&lt;/p&gt;
+</content>
+        <category term="网站" />
+        <updated>2024-04-11T02:51:53.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://howjul.github.io/2023/11/21/home/</id>
+        <title>Hello～</title>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/21/home/"/>
+        <content type="html">&lt;p&gt;这里是👉👉👉HowJul👈👈👈的主页&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💡个人笔记网址：&lt;a href=&#34;http://note.zhz.zone/&#34;&gt;http://note.zhz.zone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🏡个人主页网址：&lt;a href=&#34;http://zhz.zone/&#34;&gt;http://zhz.zone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🌈网站更新日志：&lt;a href=&#34;https://zhz.zone/2023/11/15/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97/&#34;&gt;点此跳转&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网站" />
+        <updated>2023-11-21T08:16:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://howjul.github.io/2023/04/19/home_1/</id>
+        <title>Hello from /home_1</title>
+        <link rel="alternate" href="https://howjul.github.io/2023/04/19/home_1/"/>
+        <content type="html">&lt;div class=&#34;note default&#34;&gt;&lt;p&gt;
+这是上个博客网站的第一篇文章......因为上一个博客网站比较花里胡哨，导致手机上常常无法显示或者加载速度过慢，因此改用next模版。
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;点此查看废弃网站！&lt;a href=&#34;https://zhz.zone/home_1&#34;&gt;https://zhz.zone/home_1&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;又是一节课都没有的周三，最近确实是非常的轻松，从上周四左右就几乎没有什么作业了，emm……闲着无事，就又开始乱玩了儿了，不过昨天半天加上今天几乎一整天，都在研究这个hexo，不过说实话有了上次的mkdocs的操作经历之后，这个就很快了，至少部署是很快了，感觉hexo要花哨很多哈哈哈哈哈哈哈，朴素的mkdocs比较适合放我的学习笔记，那么这个博客网站，就放点其他的东西吧。虽然事实上，都是在搬运别人写好的东西，前端的这些代码看看确实是复杂，我我我我我还是算了。所以搞这个网站大部分时间还是花在了读懂那些参数和文件的结构什么，不过最终终于弄好了呗～  &lt;/p&gt;
+&lt;p&gt;说得好，做这个网站其实可能对我的学习成绩没有什么帮助，就当是消遣了吧……&lt;/p&gt;
+</content>
+        <category term="网站" />
+        <updated>2023-04-18T16:00:00.000Z</updated>
+    </entry>
+</feed>

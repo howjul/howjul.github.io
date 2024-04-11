@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://howjul.github.io</id>
+    <title>HowJul&#39;s Garden • Posts by &#34;大一暑假&#34; tag</title>
+    <link href="https://howjul.github.io" />
+    <updated>2023-11-25T04:05:55.000Z</updated>
+    <category term="网站" />
+    <category term="课程总结" />
+    <category term="大一春夏" />
+    <category term="大一暑假" />
+    <category term="大一秋冬" />
+    <category term="大二春夏" />
+    <category term="大二秋冬" />
+    <category term="计算机动画" />
+    <category term="课程笔记" />
+    <category term="大三秋冬" />
+    <category term="计算机系统" />
+    <category term="技术沟通" />
+    <entry>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <title>大一暑假 课程总结</title>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
+暑假～上了快一个月的短学期，真的是高强度，这半年真的是，从大一下30学分——汇编C大加上计算机系统三座大山中走了出来，计概加上攻防倒是没有那么恐怖了。攻防的话，第一次安装了linux虚拟机，然后只需要按照实验书上的照着把所有的作业都做完之后就可以了，计算机系统概论因为我上了系统一和汇编，所以非常轻松，最后在七月二十五，也就是我的生日～踏上了回家的旅途～
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h3 id=&#34;课程综合实践I-软件攻防-2-5&#34;&gt;&lt;a href=&#34;#课程综合实践I-软件攻防-2-5&#34; class=&#34;headerlink&#34; title=&#34;课程综合实践I 软件攻防(2.5)&#34;&gt;&lt;/a&gt;课程综合实践I 软件攻防(2.5)&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;推荐指数：🌟🌟🌟🌟&lt;/li&gt;
+&lt;li&gt;作业指数：🌟🌟🌟&lt;/li&gt;
+&lt;li&gt;课程类别：实践教学环节&amp;lt;选修课程&amp;gt;&lt;/li&gt;
+&lt;li&gt;课程总结：如果是冲着给分的话，来吧～作业做完就是满绩，课程的内容主要是学习一些简单的ctf，不过能学到多少东西就看自己了，反正我是没听懂什么hhh，但是觉得web安全还蛮有意思的，虽然后面回家又玩嗨了，也没有深入去学什么。emm，也就这样吧，也算是linux的一个小入门了，只记得自己那时候天天呆在图书馆里肝作业了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;计算机系统概论-4&#34;&gt;&lt;a href=&#34;#计算机系统概论-4&#34; class=&#34;headerlink&#34; title=&#34;计算机系统概论(4)&#34;&gt;&lt;/a&gt;计算机系统概论(4)&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;推荐指数：🌟🌟🌟🌟&lt;/li&gt;
+&lt;li&gt;作业指数：🌟🌟🌟&lt;/li&gt;
+&lt;li&gt;课程类别：实践教学环节&amp;lt;选修课程&amp;gt;&lt;/li&gt;
+&lt;li&gt;课程总结：反正没事儿，索性就多学点，虽然计概学的东西我都已经学过了，算复习好了。早上是patt的上课时间，不过是呆在寝室里的网课，没怎么听过hhhhh，下午是去验收实验呗。对我来说都还行，除了最后的大实验，一般下午布置的晚上都能搞定了～实验是用汇编写的，终于体现出来学汇编的意义了笑死，虽然汇编考试考炸了，但在这里总归还是有点用的。这段时间一直在西一二楼那里学习，到这个时候，学校里已经没什么人了，只有着蝉鸣和烈日，我倒是很喜欢这种感觉哈哈哈哈哈。最后的大作业用了好久的时间，好像是写一个汇编器还是语言解释器来着我忘了，pta上自动判定的，有几个点用了好久才过去。9月回来第一周考试，考试内容还蛮简单的，所以也还不错。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="课程总结" />
+        <category term="大一暑假" />
+        <updated>2023-11-25T04:05:55.000Z</updated>
+    </entry>
+</feed>
