@@ -8,14 +8,14 @@
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
     <category term="大二秋冬" />
-    <category term="计算机动画" />
+    <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
-    <category term="技术沟通" />
+    <category term="计算机动画" />
+    <category term="大一秋冬" />
     <entry>
         <id>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
         <title>技术沟通笔记</title>
@@ -29,9 +29,9 @@
 &lt;li&gt;&lt;a href=&#34;https://zhz.zone/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/6%20%E6%BC%94%E7%A4%BA%E6%96%B9%E6%B3%95/&#34;&gt;演示方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
+        <category term="技术沟通" />
         <category term="课程笔记" />
         <category term="大三秋冬" />
-        <category term="技术沟通" />
         <updated>2023-11-25T03:50:14.000Z</updated>
     </entry>
 </feed>
