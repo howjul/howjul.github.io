@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://howjul.com</id>
+    <id>https://howjul.github.io</id>
     <title>HowJul&#39;s Garden • Posts by &#34;大二春夏&#34; tag</title>
-    <link href="https://howjul.com" />
+    <link href="https://howjul.github.io" />
     <updated>2023-11-25T03:52:30.000Z</updated>
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
-    <category term="大二秋冬" />
+    <category term="大一秋冬" />
     <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
+    <category term="大二秋冬" />
     <category term="计算机动画" />
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大二春夏 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 学分最少的一个学期，不过其实也不是很轻松，不过考试周比之前那是轻松了太多了哈哈哈哈哈哈哈，21号开始考试，我29号第一门，总共三门哈哈哈哈哈哈哈，考试周先放假一周。春学期还好，夏学期以为自己要死掉了，但是最后关头软安突然作业减少，所以还是熬过来了，不过相比那些选数据库的大佬来说，我的压力还是不值一提的。现在倒有点后悔没有选数据库了，之后要补的专业选修课太多了，听说给分还不是很好，头疼。
 &lt;/p&gt;&lt;/div&gt;

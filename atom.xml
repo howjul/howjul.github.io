@@ -1,34 +1,34 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://howjul.com</id>
+    <id>https://howjul.github.io</id>
     <title>HowJul&#39;s Garden</title>
-    <link href="https://howjul.com" />
+    <link href="https://howjul.github.io" />
     <updated>2024-04-11T02:51:53.000Z</updated>
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
-    <category term="大二秋冬" />
+    <category term="大一秋冬" />
     <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
+    <category term="大二秋冬" />
     <category term="计算机动画" />
     <entry>
-        <id>https://howjul.com/2024/04/11/maupassant/</id>
+        <id>https://howjul.github.io/2024/04/11/maupassant/</id>
         <title>新的开始</title>
-        <link rel="alternate" href="https://howjul.com/2024/04/11/maupassant/"/>
+        <link rel="alternate" href="https://howjul.github.io/2024/04/11/maupassant/"/>
         <content type="html">&lt;p&gt;咳咳，这是第三个hexo主题了，笑死，前两个都已经废弃了，一个是matery的主题，一个NexT主题。更换的起因都是网页加载太慢了，从开始的hexo-theme-matery，华丽是真的华丽，但是要设置的东西太多了，而且加载图片实再是太慢了，而且创建了半年也没发一条博客，服了我自己。然后，以计算机学院的网站大赛为契机，我决定改成稍微简约一点的主题，选择NexT是因为他比较简约，而且用的人感觉是最多的，网上一搜教程大大滴有，各种花里胡哨的组件也多，所以就花了好久移植到了NexT。在这个时期为了让我的网站显得好看一点，还是写了几篇博客，好吧，其实就是把我自己的笔记移到了博客上咳咳咳……接下来，博客网站又荒废了，而我的&lt;a href=&#34;https://note.howjul.com/&#34;&gt;笔记网站&lt;/a&gt;倒是写了好多的内容，特别是因为我最近在读文献入门AI，笔记真的是写了一大堆。当然，最近有向语雀发展的趋势，因为语雀实再是比较方便，而且不用管图片啥的，而且样式确实是好看很多啊，之后的笔记应该是mkdocs和语雀混用了。好了，这几天，刚好日记记录了六周年了，想着发一下朋友圈庆祝一下，顺便安利一下我的网站（刚好域名还有十天也快到期了，换个新域名），结果昨天看了一下自己的NexT，结果侧边栏根本写不出来，我真的是服了，感觉这个也不是很简约，放在手机里根本加载不出来，就想着是不是找个教程给自己的网站加加速。找着找着，咳咳，发现这个主题不错，就又移过来了，然后昨天原来是要看论文的，又搁置了啊啊啊啊啊啊啊，服了我自己了，不过移植的速度还是挺快的，大概三四个小时就差不多好了，这下，这个主题，应该是能用好久了…..吧。从原来的华丽，到现在越来越简约了，我是变成熟了嘛，明明只有一年的时间，审美变化好大，笑死。&lt;/p&gt;
 </content>
         <category term="网站" />
         <updated>2024-04-11T02:51:53.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一暑假 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 暑假～上了快一个月的短学期，真的是高强度，这半年真的是，从大一下30学分——汇编C大加上计算机系统三座大山中走了出来，计概加上攻防倒是没有那么恐怖了。攻防的话，第一次安装了linux虚拟机，然后只需要按照实验书上的照着把所有的作业都做完之后就可以了，计算机系统概论因为我上了系统一和汇编，所以非常轻松，最后在七月二十五，也就是我的生日～踏上了回家的旅途～
 &lt;/p&gt;&lt;/div&gt;
@@ -53,9 +53,9 @@
         <updated>2023-11-25T04:05:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大二春夏 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 学分最少的一个学期，不过其实也不是很轻松，不过考试周比之前那是轻松了太多了哈哈哈哈哈哈哈，21号开始考试，我29号第一门，总共三门哈哈哈哈哈哈哈，考试周先放假一周。春学期还好，夏学期以为自己要死掉了，但是最后关头软安突然作业减少，所以还是熬过来了，不过相比那些选数据库的大佬来说，我的压力还是不值一提的。现在倒有点后悔没有选数据库了，之后要补的专业选修课太多了，听说给分还不是很好，头疼。
 &lt;/p&gt;&lt;/div&gt;
@@ -116,9 +116,9 @@
         <updated>2023-11-25T03:52:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大二秋冬 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 这学期虽然没有上个学期那么恐怖，但压力也不小，特别是考试周，虽然是在家里，但真的是有点绝望的。最后的计算机系统II考前的那一夜几乎没怎么睡觉，还是第一次为了考试熬夜。这学期12月一半时间在酒店里，之后就回家了，不过这倒是锻炼了一下自己在家的学习效率，but......寒假又玩的不知道学习是啥了。
 &lt;/p&gt;&lt;/div&gt;
@@ -197,9 +197,9 @@
         <updated>2023-11-25T03:52:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一春夏 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 可怕，可怕，现在回想起来还是心有余悸的一个学期啊。30学分，什么都有，微积分大英大物，还有C大程汇编系统一信息安全数学原理......这才认识到大一上的快乐啊，那没有lab只有作业的日子，真的已经很幸福了。期末三个大作业，我都不知道我是怎么做好的，一个一个全都完成了，放现在估计是顶不住了，年轻就是好啊～这学期的代码量感觉比大二两年加起来的还多，这就是信安的魔鬼大一。
 &lt;/p&gt;&lt;/div&gt;
@@ -272,9 +272,9 @@
         <updated>2023-11-25T03:52:15.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一秋冬 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 大学第一个学期，还在适应当中，不知为啥，各方面都不太行，记忆也已经有些模糊......
 &lt;/p&gt;&lt;/div&gt;
@@ -353,9 +353,9 @@
         <updated>2023-11-25T03:52:08.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
+        <id>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
         <title>技术沟通笔记</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/1%20%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/&#34;&gt;文献检索&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/2%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/&#34;&gt;文献阅读&lt;/a&gt;&lt;/li&gt;
@@ -371,9 +371,9 @@
         <updated>2023-11-25T03:50:14.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/21/home/</id>
+        <id>https://howjul.github.io/2023/11/21/home/</id>
         <title>Hello～</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/21/home/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/21/home/"/>
         <content type="html">&lt;p&gt;这里是👉👉👉HowJul👈👈👈的主页&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;💡个人笔记网址：&lt;a href=&#34;https://note.howjul.com/&#34;&gt;https://note.howjul.com&lt;/a&gt;&lt;/li&gt;
@@ -388,9 +388,9 @@
         <updated>2023-11-21T08:16:29.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</id>
         <title>计算机动画复习</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;h2 id=&#34;计算机动画简介&#34;&gt;&lt;a href=&#34;#计算机动画简介&#34; class=&#34;headerlink&#34; title=&#34;计算机动画简介&#34;&gt;&lt;/a&gt;计算机动画简介&lt;/h2&gt;&lt;h3 id=&#34;1-动画基本知识、动画形成的视觉原理&#34;&gt;&lt;a href=&#34;#1-动画基本知识、动画形成的视觉原理&#34; class=&#34;headerlink&#34; title=&#34;1. 动画基本知识、动画形成的视觉原理&#34;&gt;&lt;/a&gt;1. 动画基本知识、动画形成的视觉原理&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/image-20231107180216962.png&#34; alt=&#34;image-20231107180216962&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/./2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/image-20231107180228576.png&#34; alt=&#34;image-20231107180228576&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-传统动画应用于三维计算机动画的12条基本原则&#34;&gt;&lt;a href=&#34;#2-传统动画应用于三维计算机动画的12条基本原则&#34; class=&#34;headerlink&#34; title=&#34;2. 传统动画应用于三维计算机动画的12条基本原则&#34;&gt;&lt;/a&gt;2. 传统动画应用于三维计算机动画的12条基本原则&lt;/h3&gt;&lt;p&gt;蕴含的目的：在设计角色时，要遵循基本的物理规律，同时也要考虑时序、吸引力等问题。&lt;/p&gt;
@@ -666,9 +666,9 @@
         <updated>2023-11-21T07:02:35.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
+        <id>https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
         <title>计算机系统期末考试相关</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
         <content type="html">&lt;h2 id=&#34;计算机系统一&#34;&gt;&lt;a href=&#34;#计算机系统一&#34; class=&#34;headerlink&#34; title=&#34;计算机系统一&#34;&gt;&lt;/a&gt;计算机系统一&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160056.jpg&#34; alt=&#34;IMG_20231115_160056&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160114.jpg&#34; alt=&#34;IMG_20231115_160114&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;计算机系统二&#34;&gt;&lt;a href=&#34;#计算机系统二&#34; class=&#34;headerlink&#34; title=&#34;计算机系统二&#34;&gt;&lt;/a&gt;计算机系统二&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160122.jpg&#34; alt=&#34;IMG_20231115_160122&#34;&gt;&lt;/p&gt;
@@ -681,9 +681,9 @@
         <updated>2023-11-15T07:53:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/04/19/matery/</id>
+        <id>https://howjul.github.io/2023/04/19/matery/</id>
         <title>My matery page</title>
-        <link rel="alternate" href="https://howjul.com/2023/04/19/matery/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/04/19/matery/"/>
         <content type="html">&lt;div class=&#34;note default&#34;&gt;&lt;p&gt;
 这是上上个博客网站的第一篇文章......因为上上个博客网站比较花里胡哨，导致手机上常常无法显示或者加载速度过慢，因此改用next模版。
 &lt;/p&gt;&lt;/div&gt;

@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://howjul.com</id>
+    <id>https://howjul.github.io</id>
     <title>HowJul&#39;s Garden • Posts by &#34;大一暑假&#34; tag</title>
-    <link href="https://howjul.com" />
+    <link href="https://howjul.github.io" />
     <updated>2023-11-25T04:05:55.000Z</updated>
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
-    <category term="大二秋冬" />
+    <category term="大一秋冬" />
     <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
+    <category term="大二秋冬" />
     <category term="计算机动画" />
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一暑假 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 暑假～上了快一个月的短学期，真的是高强度，这半年真的是，从大一下30学分——汇编C大加上计算机系统三座大山中走了出来，计概加上攻防倒是没有那么恐怖了。攻防的话，第一次安装了linux虚拟机，然后只需要按照实验书上的照着把所有的作业都做完之后就可以了，计算机系统概论因为我上了系统一和汇编，所以非常轻松，最后在七月二十五，也就是我的生日～踏上了回家的旅途～
 &lt;/p&gt;&lt;/div&gt;

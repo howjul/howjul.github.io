@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>HowJul&#39;s Garden • Posts by &#34;课程笔记&#34; category</title>
-        <link>https://howjul.com</link>
+        <link>https://howjul.github.io</link>
         <description>ZJU 信安本科</description>
         <language>zh-CN</language>
         <pubDate>Sat, 25 Nov 2023 11:50:14 +0800</pubDate>
@@ -11,18 +11,18 @@
         <category>课程总结</category>
         <category>大一春夏</category>
         <category>大一暑假</category>
-        <category>大一秋冬</category>
         <category>大二春夏</category>
-        <category>大二秋冬</category>
+        <category>大一秋冬</category>
         <category>技术沟通</category>
         <category>课程笔记</category>
         <category>大三秋冬</category>
         <category>计算机系统</category>
+        <category>大二秋冬</category>
         <category>计算机动画</category>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</guid>
             <title>技术沟通笔记</title>
-            <link>https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</link>
+            <link>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</link>
             <category>技术沟通</category>
             <category>课程笔记</category>
             <category>大三秋冬</category>
@@ -38,9 +38,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</guid>
             <title>计算机动画复习</title>
-            <link>https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</link>
+            <link>https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</link>
             <category>课程笔记</category>
             <category>大三秋冬</category>
             <category>计算机动画</category>
@@ -316,9 +316,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</guid>
             <title>计算机系统期末考试相关</title>
-            <link>https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</link>
+            <link>https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</link>
             <category>课程笔记</category>
             <category>计算机系统</category>
             <pubDate>Wed, 15 Nov 2023 15:53:09 +0800</pubDate>

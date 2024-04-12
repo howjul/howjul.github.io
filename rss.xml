@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>HowJul&#39;s Garden</title>
-        <link>https://howjul.com</link>
+        <link>https://howjul.github.io</link>
         <description>ZJU 信安本科</description>
         <language>zh-CN</language>
         <pubDate>Thu, 11 Apr 2024 10:51:53 +0800</pubDate>
@@ -11,27 +11,27 @@
         <category>课程总结</category>
         <category>大一春夏</category>
         <category>大一暑假</category>
-        <category>大一秋冬</category>
         <category>大二春夏</category>
-        <category>大二秋冬</category>
+        <category>大一秋冬</category>
         <category>技术沟通</category>
         <category>课程笔记</category>
         <category>大三秋冬</category>
         <category>计算机系统</category>
+        <category>大二秋冬</category>
         <category>计算机动画</category>
         <item>
-            <guid isPermalink="true">https://howjul.com/2024/04/11/maupassant/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2024/04/11/maupassant/</guid>
             <title>新的开始</title>
-            <link>https://howjul.com/2024/04/11/maupassant/</link>
+            <link>https://howjul.github.io/2024/04/11/maupassant/</link>
             <category>网站</category>
             <pubDate>Thu, 11 Apr 2024 10:51:53 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;咳咳，这是第三个hexo主题了，笑死，前两个都已经废弃了，一个是matery的主题，一个NexT主题。更换的起因都是网页加载太慢了，从开始的hexo-theme-matery，华丽是真的华丽，但是要设置的东西太多了，而且加载图片实再是太慢了，而且创建了半年也没发一条博客，服了我自己。然后，以计算机学院的网站大赛为契机，我决定改成稍微简约一点的主题，选择NexT是因为他比较简约，而且用的人感觉是最多的，网上一搜教程大大滴有，各种花里胡哨的组件也多，所以就花了好久移植到了NexT。在这个时期为了让我的网站显得好看一点，还是写了几篇博客，好吧，其实就是把我自己的笔记移到了博客上咳咳咳……接下来，博客网站又荒废了，而我的&lt;a href=&#34;https://note.howjul.com/&#34;&gt;笔记网站&lt;/a&gt;倒是写了好多的内容，特别是因为我最近在读文献入门AI，笔记真的是写了一大堆。当然，最近有向语雀发展的趋势，因为语雀实再是比较方便，而且不用管图片啥的，而且样式确实是好看很多啊，之后的笔记应该是mkdocs和语雀混用了。好了，这几天，刚好日记记录了六周年了，想着发一下朋友圈庆祝一下，顺便安利一下我的网站（刚好域名还有十天也快到期了，换个新域名），结果昨天看了一下自己的NexT，结果侧边栏根本写不出来，我真的是服了，感觉这个也不是很简约，放在手机里根本加载不出来，就想着是不是找个教程给自己的网站加加速。找着找着，咳咳，发现这个主题不错，就又移过来了，然后昨天原来是要看论文的，又搁置了啊啊啊啊啊啊啊，服了我自己了，不过移植的速度还是挺快的，大概三四个小时就差不多好了，这下，这个主题，应该是能用好久了…..吧。从原来的华丽，到现在越来越简约了，我是变成熟了嘛，明明只有一年的时间，审美变化好大，笑死。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
             <title>大一暑假 课程总结</title>
-            <link>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
+            <link>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
             <category>课程总结</category>
             <category>大一暑假</category>
             <pubDate>Sat, 25 Nov 2023 12:05:55 +0800</pubDate>
@@ -56,9 +56,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
             <title>大二春夏 课程总结</title>
-            <link>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
+            <link>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
             <category>课程总结</category>
             <category>大二春夏</category>
             <pubDate>Sat, 25 Nov 2023 11:52:30 +0800</pubDate>
@@ -119,9 +119,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
             <title>大二秋冬 课程总结</title>
-            <link>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
+            <link>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
             <category>课程总结</category>
             <category>大二秋冬</category>
             <pubDate>Sat, 25 Nov 2023 11:52:24 +0800</pubDate>
@@ -200,9 +200,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
             <title>大一春夏 课程总结</title>
-            <link>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
+            <link>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
             <category>课程总结</category>
             <category>大一春夏</category>
             <pubDate>Sat, 25 Nov 2023 11:52:15 +0800</pubDate>
@@ -275,9 +275,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</guid>
             <title>大一秋冬 课程总结</title>
-            <link>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
+            <link>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</link>
             <category>课程总结</category>
             <category>大一秋冬</category>
             <pubDate>Sat, 25 Nov 2023 11:52:08 +0800</pubDate>
@@ -356,9 +356,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</guid>
             <title>技术沟通笔记</title>
-            <link>https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</link>
+            <link>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</link>
             <category>技术沟通</category>
             <category>课程笔记</category>
             <category>大三秋冬</category>
@@ -374,9 +374,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/21/home/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/21/home/</guid>
             <title>Hello～</title>
-            <link>https://howjul.com/2023/11/21/home/</link>
+            <link>https://howjul.github.io/2023/11/21/home/</link>
             <category>网站</category>
             <pubDate>Tue, 21 Nov 2023 16:16:29 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;这里是👉👉👉HowJul👈👈👈的主页&lt;/p&gt;
@@ -391,9 +391,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</guid>
             <title>计算机动画复习</title>
-            <link>https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</link>
+            <link>https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</link>
             <category>课程笔记</category>
             <category>大三秋冬</category>
             <category>计算机动画</category>
@@ -669,9 +669,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</guid>
             <title>计算机系统期末考试相关</title>
-            <link>https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</link>
+            <link>https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</link>
             <category>课程笔记</category>
             <category>计算机系统</category>
             <pubDate>Wed, 15 Nov 2023 15:53:09 +0800</pubDate>
@@ -684,9 +684,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://howjul.com/2023/04/19/matery/</guid>
+            <guid isPermalink="true">https://howjul.github.io/2023/04/19/matery/</guid>
             <title>My matery page</title>
-            <link>https://howjul.com/2023/04/19/matery/</link>
+            <link>https://howjul.github.io/2023/04/19/matery/</link>
             <category>网站</category>
             <pubDate>Wed, 19 Apr 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note default&#34;&gt;&lt;p&gt;

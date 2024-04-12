@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://howjul.com</id>
+    <id>https://howjul.github.io</id>
     <title>HowJul&#39;s Garden • Posts by &#34;课程总结&#34; tag</title>
-    <link href="https://howjul.com" />
+    <link href="https://howjul.github.io" />
     <updated>2023-11-25T04:05:55.000Z</updated>
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
-    <category term="大二秋冬" />
+    <category term="大一秋冬" />
     <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
+    <category term="大二秋冬" />
     <category term="计算机动画" />
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一暑假 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%9A%91%E5%81%87-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 暑假～上了快一个月的短学期，真的是高强度，这半年真的是，从大一下30学分——汇编C大加上计算机系统三座大山中走了出来，计概加上攻防倒是没有那么恐怖了。攻防的话，第一次安装了linux虚拟机，然后只需要按照实验书上的照着把所有的作业都做完之后就可以了，计算机系统概论因为我上了系统一和汇编，所以非常轻松，最后在七月二十五，也就是我的生日～踏上了回家的旅途～
 &lt;/p&gt;&lt;/div&gt;
@@ -44,9 +44,9 @@
         <updated>2023-11-25T04:05:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大二春夏 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 学分最少的一个学期，不过其实也不是很轻松，不过考试周比之前那是轻松了太多了哈哈哈哈哈哈哈，21号开始考试，我29号第一门，总共三门哈哈哈哈哈哈哈，考试周先放假一周。春学期还好，夏学期以为自己要死掉了，但是最后关头软安突然作业减少，所以还是熬过来了，不过相比那些选数据库的大佬来说，我的压力还是不值一提的。现在倒有点后悔没有选数据库了，之后要补的专业选修课太多了，听说给分还不是很好，头疼。
 &lt;/p&gt;&lt;/div&gt;
@@ -107,9 +107,9 @@
         <updated>2023-11-25T03:52:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大二秋冬 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 这学期虽然没有上个学期那么恐怖，但压力也不小，特别是考试周，虽然是在家里，但真的是有点绝望的。最后的计算机系统II考前的那一夜几乎没怎么睡觉，还是第一次为了考试熬夜。这学期12月一半时间在酒店里，之后就回家了，不过这倒是锻炼了一下自己在家的学习效率，but......寒假又玩的不知道学习是啥了。
 &lt;/p&gt;&lt;/div&gt;
@@ -188,9 +188,9 @@
         <updated>2023-11-25T03:52:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一春夏 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E6%98%A5%E5%A4%8F-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 可怕，可怕，现在回想起来还是心有余悸的一个学期啊。30学分，什么都有，微积分大英大物，还有C大程汇编系统一信息安全数学原理......这才认识到大一上的快乐啊，那没有lab只有作业的日子，真的已经很幸福了。期末三个大作业，我都不知道我是怎么做好的，一个一个全都完成了，放现在估计是顶不住了，年轻就是好啊～这学期的代码量感觉比大二两年加起来的还多，这就是信安的魔鬼大一。
 &lt;/p&gt;&lt;/div&gt;
@@ -263,9 +263,9 @@
         <updated>2023-11-25T03:52:15.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
+        <id>https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</id>
         <title>大一秋冬 课程总结</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E5%A4%A7%E4%B8%80%E7%A7%8B%E5%86%AC-%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;div class=&#34;note success&#34;&gt;&lt;p&gt;
 大学第一个学期，还在适应当中，不知为啥，各方面都不太行，记忆也已经有些模糊......
 &lt;/p&gt;&lt;/div&gt;

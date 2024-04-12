@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://howjul.com</id>
+    <id>https://howjul.github.io</id>
     <title>HowJul&#39;s Garden • Posts by &#34;课程笔记&#34; tag</title>
-    <link href="https://howjul.com" />
+    <link href="https://howjul.github.io" />
     <updated>2023-11-25T03:50:14.000Z</updated>
     <category term="网站" />
     <category term="课程总结" />
     <category term="大一春夏" />
     <category term="大一暑假" />
-    <category term="大一秋冬" />
     <category term="大二春夏" />
-    <category term="大二秋冬" />
+    <category term="大一秋冬" />
     <category term="技术沟通" />
     <category term="课程笔记" />
     <category term="大三秋冬" />
     <category term="计算机系统" />
+    <category term="大二秋冬" />
     <category term="计算机动画" />
     <entry>
-        <id>https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
+        <id>https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/</id>
         <title>技术沟通笔记</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/25/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/1%20%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/&#34;&gt;文献检索&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://howjul.com/note/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/2%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/&#34;&gt;文献阅读&lt;/a&gt;&lt;/li&gt;
@@ -35,9 +35,9 @@
         <updated>2023-11-25T03:50:14.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/</id>
         <title>计算机动画复习</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;h2 id=&#34;计算机动画简介&#34;&gt;&lt;a href=&#34;#计算机动画简介&#34; class=&#34;headerlink&#34; title=&#34;计算机动画简介&#34;&gt;&lt;/a&gt;计算机动画简介&lt;/h2&gt;&lt;h3 id=&#34;1-动画基本知识、动画形成的视觉原理&#34;&gt;&lt;a href=&#34;#1-动画基本知识、动画形成的视觉原理&#34; class=&#34;headerlink&#34; title=&#34;1. 动画基本知识、动画形成的视觉原理&#34;&gt;&lt;/a&gt;1. 动画基本知识、动画形成的视觉原理&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/image-20231107180216962.png&#34; alt=&#34;image-20231107180216962&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/./2023/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB%E5%A4%8D%E4%B9%A0/image-20231107180228576.png&#34; alt=&#34;image-20231107180228576&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-传统动画应用于三维计算机动画的12条基本原则&#34;&gt;&lt;a href=&#34;#2-传统动画应用于三维计算机动画的12条基本原则&#34; class=&#34;headerlink&#34; title=&#34;2. 传统动画应用于三维计算机动画的12条基本原则&#34;&gt;&lt;/a&gt;2. 传统动画应用于三维计算机动画的12条基本原则&lt;/h3&gt;&lt;p&gt;蕴含的目的：在设计角色时，要遵循基本的物理规律，同时也要考虑时序、吸引力等问题。&lt;/p&gt;
@@ -313,9 +313,9 @@
         <updated>2023-11-21T07:02:35.000Z</updated>
     </entry>
     <entry>
-        <id>https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
+        <id>https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</id>
         <title>计算机系统期末考试相关</title>
-        <link rel="alternate" href="https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
+        <link rel="alternate" href="https://howjul.github.io/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/"/>
         <content type="html">&lt;h2 id=&#34;计算机系统一&#34;&gt;&lt;a href=&#34;#计算机系统一&#34; class=&#34;headerlink&#34; title=&#34;计算机系统一&#34;&gt;&lt;/a&gt;计算机系统一&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160056.jpg&#34; alt=&#34;IMG_20231115_160056&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160114.jpg&#34; alt=&#34;IMG_20231115_160114&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;计算机系统二&#34;&gt;&lt;a href=&#34;#计算机系统二&#34; class=&#34;headerlink&#34; title=&#34;计算机系统二&#34;&gt;&lt;/a&gt;计算机系统二&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/./2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/IMG_20231115_160122.jpg&#34; alt=&#34;IMG_20231115_160122&#34;&gt;&lt;/p&gt;
