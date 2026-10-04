@@ -1,0 +1,146 @@
+---
+import { getEntry, render } from 'astro:content'
+import { profile } from '@/data/profile'
+import type { Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const entry = await getEntry('home', lang)
+const { Content } = entry ? await render(entry) : { Content: null }
+
+// Links with an `icon` sit beside the name; the rest are shown as text under the intro
+const iconLinks = profile.links.filter((link) => link.icon)
+const textLinks = profile.links.filter((link) => !link.icon)
+const isExternal = (href: string) => href.startsWith('http')
+---
+
+<section class="intro">
+  <div class="heading">
+    <div>
+      <h1>{profile.name[lang]}</h1>
+      <p class="role">{profile.role[lang]}</p>
+    </div>
+    {iconLinks.length > 0 && (
+      <ul class="icons">
+        {iconLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              title={link.label[lang]}
+              aria-label={link.label[lang]}
+              target={isExternal(link.href) ? '_blank' : undefined}
+              rel="noopener"
+            >
+              {link.icon === 'email' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2.25" />
+                  <path d="M3.5 6.5 12 13l8.5-6.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              )}
+              {link.icon === 'github' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              )}
+              {link.icon === 'scholar' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                </svg>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+  {Content && (
+    <div class="bio prose">
+      <Content />
+    </div>
+  )}
+  {textLinks.length > 0 && (
+    <ul class="links">
+      {textLinks.map((link) => (
+        <li>
+          <a href={link.href} target={isExternal(link.href) ? '_blank' : undefined} rel="noopener">
+            {link.label[lang]}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+</section>
+
+<style>
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.6;
+  }
+  .role {
+    margin: 0.125rem 0 0;
+    color: var(--text-secondary);
+  }
+  .icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0 -0.5rem 0 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease-out;
+  }
+  .icons a:hover {
+    color: var(--text-primary);
+  }
+  .icons svg {
+    width: 1.1875rem;
+    height: 1.1875rem;
+  }
+  .bio {
+    margin: 1.75rem 0 0;
+  }
+  .bio :global(p:first-child) {
+    margin-top: 0;
+  }
+  .bio :global(p) {
+    margin: 1.1em 0;
+  }
+  .links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+  }
+  .links a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--text-tertiary);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.2s ease-out;
+  }
+  .links a:hover {
+    text-decoration-color: var(--text-primary);
+  }
+</style>

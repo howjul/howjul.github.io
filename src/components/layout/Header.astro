@@ -1,0 +1,68 @@
+---
+import { themeConfig } from '@/config'
+import { noteSites } from '@/data/profile'
+import { getLang, localePath, switchLangPath, t } from '@/i18n'
+import ThemeToggle from '@/components/ui/ThemeToggle.astro'
+
+interface Props {
+  /** Link for the language switch. Defaults to the same path in the other language. */
+  altHref?: string
+}
+
+const lang = getLang(Astro.url.pathname)
+const text = t(lang)
+const altHref = Astro.props.altHref ?? switchLangPath(Astro.url.pathname)
+---
+
+<header>
+  <nav>
+    <a class="site-title" href={localePath(lang, '/')}>
+      {themeConfig.site.title}
+    </a>
+    <div class="links">
+      <a href={localePath(lang, '/about/')}>{text.about}</a>
+      {noteSites.length > 0 && <a href={`${localePath(lang, '/')}#notes`}>{text.notes}</a>}
+      <a href={altHref} aria-label={text.switchLabel}>
+        {text.switchTo}
+      </a>
+      {themeConfig.general.themeToggle && <ThemeToggle />}
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0 0 2.5rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .site-title {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    text-decoration: none;
+    min-width: 3rem;
+    display: inline-block;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+  }
+  .links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease-out;
+  }
+  .links a:hover {
+    color: var(--text-primary);
+  }
+  @media (max-width: 420px) {
+    .links {
+      gap: 0.875rem;
+    }
+  }
+</style>

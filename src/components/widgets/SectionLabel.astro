@@ -1,0 +1,47 @@
+---
+interface Props {
+  href?: string
+  linkText?: string
+}
+const { href, linkText } = Astro.props
+---
+
+<div class="section-label">
+  <h2>
+    <slot />
+  </h2>
+  {href && linkText && <a href={href}>{linkText} →</a>}
+</div>
+
+<style>
+  .section-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 3.25rem 0 0.75rem;
+  }
+  h2 {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0;
+    color: var(--text-secondary);
+  }
+  /* Chinese has no italic serif face here: use the regular sans instead */
+  :global(html[lang^='zh']) h2 {
+    font-family: var(--sans);
+    font-style: normal;
+    letter-spacing: 0.04em;
+  }
+  a {
+    font-size: var(--font-size-s);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+  }
+  a:hover {
+    color: var(--text-primary);
+  }
+</style>

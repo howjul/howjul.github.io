@@ -1,0 +1,77 @@
+---
+import { awards } from '@/data/profile'
+import type { Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang
+  /** Show only the first N awards */
+  limit?: number
+}
+
+const { lang, limit } = Astro.props
+const shown = limit ? awards.slice(0, limit) : awards
+---
+
+<ul class="awards">
+  {shown.map((award) => (
+    <li>
+      <p class="award-title">
+        {award.title[lang]}
+        {award.note && <span class="award-note">{award.note[lang]}</span>}
+      </p>
+      <div class="divider" />
+      <p class="date font-features">{award.year}</p>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .awards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.4375rem 0;
+  }
+  p {
+    margin: 0;
+  }
+  .award-title {
+    flex: 0 1 auto;
+    min-width: 0;
+    line-height: 1.6;
+  }
+  .award-note {
+    margin-left: 0.5rem;
+    font-size: var(--font-size-s);
+    color: var(--text-secondary);
+  }
+  .divider {
+    flex: 1 1 auto;
+    /* Collapses to nothing when a long title wraps */
+    min-width: 0;
+    margin: 0 0.25rem;
+    height: 0.5px;
+    background-color: var(--border);
+    align-self: center;
+  }
+  .date {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  /* On narrow screens titles wrap, so drop the rule and keep the year on the first line */
+  @media (max-width: 480px) {
+    .divider {
+      background-color: transparent;
+      min-width: 0.5rem;
+    }
+    .award-note {
+      display: block;
+      margin-left: 0;
+    }
+  }
+</style>

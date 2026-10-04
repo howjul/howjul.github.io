@@ -1,0 +1,88 @@
+---
+import { profile, publications } from '@/data/profile'
+import type { Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+---
+
+<ol class="pubs">
+  {publications.map((pub) => (
+    <li>
+      <p class="pub-title">{pub.title}</p>
+      <p class="pub-authors">
+        {pub.authors
+          .map((author) => <span class={author === profile.authorName ? 'me' : undefined}>{author}</span>)
+          .flatMap((el, i) => (i === 0 ? [el] : [i < (pub.coFirstAuthors ?? 0) ? ' and ' : ', ', el]))}
+      </p>
+      <p class="pub-meta">
+        <span class="venue">
+          {pub.venue} {pub.year}
+        </span>
+        {pub.note && <span class="note">{pub.note[lang]}</span>}
+        {pub.links?.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener">
+            {link.label}
+          </a>
+        ))}
+      </p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .pubs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+  }
+  p {
+    margin: 0;
+  }
+  .pub-title {
+    line-height: 1.55;
+  }
+  .pub-authors {
+    margin-top: 0.25rem;
+    font-size: var(--font-size-s);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .me {
+    color: var(--text-primary);
+  }
+  .pub-meta {
+    margin-top: 0.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.875rem;
+    font-size: var(--font-size-s);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .venue {
+    font-family: var(--serif);
+    font-style: italic;
+    letter-spacing: 0;
+  }
+  .pub-meta a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--text-tertiary);
+    text-underline-offset: 0.2em;
+    transition:
+      color 0.2s ease-out,
+      text-decoration-color 0.2s ease-out;
+  }
+  .pub-meta a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+  }
+</style>

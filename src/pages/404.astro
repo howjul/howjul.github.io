@@ -1,0 +1,13 @@
+---
+import { themeConfig } from '@/config'
+import IndexLayout from '@/layouts/IndexLayout.astro'
+---
+
+<IndexLayout title={`404 - ${themeConfig.site.title}`} description="Not Found">
+  <style>
+    .error-container {
+      color: var(--text-secondary);
+    }
+  </style>
+  <p class="error-container">页面不存在 · Page not found…</p>
+</IndexLayout>

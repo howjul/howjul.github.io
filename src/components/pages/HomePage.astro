@@ -1,0 +1,77 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import Intro from '@/components/widgets/Intro.astro'
+import Publications from '@/components/widgets/Publications.astro'
+import Awards from '@/components/widgets/Awards.astro'
+import NoteSites from '@/components/widgets/NoteSites.astro'
+import PostList from '@/components/widgets/PostList.astro'
+import SectionLabel from '@/components/widgets/SectionLabel.astro'
+import { themeConfig } from '@/config'
+import { awards, noteSites, profile, publications } from '@/data/profile'
+import { localePath, t, type Lang } from '@/i18n'
+import { getSortedFilteredPosts } from '@/utils/draft'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const text = t(lang)
+const posts = await getSortedFilteredPosts(lang)
+const shown = posts.slice(0, profile.homePostCount)
+const hasMore = posts.length > shown.length
+const hasMoreAwards = awards.length > profile.homeAwardCount
+const title = `${profile.name[lang]} · ${themeConfig.site.title}`
+---
+
+<IndexLayout title={title} description={profile.role[lang]}>
+  <Intro lang={lang} />
+
+  {publications.length > 0 && (
+    <section>
+      <SectionLabel>{text.publications}</SectionLabel>
+      <Publications lang={lang} />
+    </section>
+  )}
+
+  {awards.length > 0 && (
+    <section>
+      <SectionLabel
+        href={hasMoreAwards ? `${localePath(lang, '/about/')}#awards` : undefined}
+        linkText={text.allAwards}
+      >
+        {text.awards}
+      </SectionLabel>
+      <Awards lang={lang} limit={profile.homeAwardCount} />
+    </section>
+  )}
+
+  <section>
+    <SectionLabel href={hasMore ? localePath(lang, '/posts/') : undefined} linkText={text.allPosts}>
+      {text.posts}
+    </SectionLabel>
+    {shown.length > 0 ? <PostList posts={shown} /> : <p class="empty">{text.noPosts}</p>}
+  </section>
+
+  {noteSites.length > 0 && (
+    <section id="notes" class="anchor">
+      <SectionLabel>{text.notes}</SectionLabel>
+      <NoteSites lang={lang} />
+    </section>
+  )}
+</IndexLayout>
+
+<style>
+  .anchor {
+    scroll-margin-top: 2rem;
+  }
+  /* The post list above already ends with 3rem of space */
+  .anchor :global(.section-label) {
+    margin-top: 0.25rem;
+  }
+  .empty {
+    color: var(--text-secondary);
+    /* Same space below as a post list leaves */
+    margin: 0 0 3rem;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import { getEntry, render } from 'astro:content'
+import '@/styles/post.css'
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import { themeConfig } from '@/config'
+import Awards from '@/components/widgets/Awards.astro'
+import SectionLabel from '@/components/widgets/SectionLabel.astro'
+import { awards, profile } from '@/data/profile'
+import { t, type Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const text = t(lang)
+const entry = await getEntry('about', lang)
+const { Content } = entry ? await render(entry) : { Content: null }
+---
+
+<IndexLayout title={`${text.about} · ${themeConfig.site.title}`} description={profile.role[lang]}>
+  <article class="about prose">
+    <div class="content">{Content && <Content />}</div>
+  </article>
+  {awards.length > 0 && (
+    <section id="awards" class="awards-section">
+      <SectionLabel>{text.awards}</SectionLabel>
+      <Awards lang={lang} />
+    </section>
+  )}
+</IndexLayout>
+
+<style>
+  .about {
+    margin-bottom: 0;
+  }
+  .awards-section {
+    scroll-margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  .about :global(h2) {
+    margin: 2.75em 0 1em;
+  }
+</style>

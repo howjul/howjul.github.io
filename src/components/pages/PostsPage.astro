@@ -1,0 +1,33 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import PostList from '@/components/widgets/PostList.astro'
+import SectionLabel from '@/components/widgets/SectionLabel.astro'
+import { themeConfig } from '@/config'
+import { t, type Lang } from '@/i18n'
+import { getSortedFilteredPosts } from '@/utils/draft'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const text = t(lang)
+const posts = await getSortedFilteredPosts(lang)
+---
+
+<IndexLayout title={`${text.posts} · ${themeConfig.site.title}`} description={themeConfig.site.description}>
+  <div class="first">
+    <SectionLabel>{text.posts}</SectionLabel>
+  </div>
+  {posts.length > 0 ? <PostList posts={posts} /> : <p class="empty">{text.noPosts}</p>}
+</IndexLayout>
+
+<style>
+  .first :global(.section-label) {
+    margin-top: 0;
+  }
+  .empty {
+    color: var(--text-secondary);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,477 @@
+<script>
+  import { fetchJsonWithCache, initOnPageLoad, setupLazyResources } from '@/utils/client/lazy-resource'
+
+  type NeoDBData = Record<string, unknown>
+  type FieldConfig = Record<string, Array<[string, (data: NeoDBData) => string]>>
+  type LocalizedTitle = {
+    lang?: unknown
+    text?: unknown
+  }
+
+  function loadNeoDBCards() {
+    const allContainers = document.querySelectorAll('.neodb-card-container')
+
+    allContainers.forEach((container) => {
+      if (!container.hasAttribute('data-url')) {
+        container.remove()
+      }
+    })
+
+    const containers = document.querySelectorAll('.neodb-card-container[data-url]')
+
+    if (containers.length === 0) {
+      return
+    }
+
+    const createElement = <TagName extends keyof HTMLElementTagNameMap>(tagName: TagName, className?: string) => {
+      const element = document.createElement(tagName)
+
+      if (className) {
+        element.className = className
+      }
+
+      return element
+    }
+
+    const renderError = (elem: HTMLElement) => {
+      const card = createElement('div', 'neodb-card error')
+      const text = createElement('p', 'neodb-error')
+
+      text.textContent = '🔴  Error'
+      card.append(text)
+      elem.replaceChildren(card)
+    }
+
+    const getHttpUrl = (url: string) => {
+      try {
+        const parsedUrl = new URL(url)
+
+        if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') {
+          return null
+        }
+
+        return parsedUrl
+      } catch {
+        return null
+      }
+    }
+
+    const getSafeHttpUrl = (url: unknown) => (typeof url === 'string' ? getHttpUrl(url)?.toString() : '') ?? ''
+
+    const getHostName = (url: URL) => url.hostname.replace(/^www\./, '').toLowerCase()
+
+    const getNeoDBFetchUrl = (url: string) => {
+      const parsedUrl = getHttpUrl(url)
+
+      if (!parsedUrl) {
+        return ''
+      }
+
+      if (getHostName(parsedUrl) === 'neodb.social') {
+        const match = parsedUrl.pathname.match(/^\/(movie|book|music|album|game|tv\/season|tv|podcast)\/([\w-]+)/)
+        const category = match ? match[1] : ''
+        const uuid = match ? match[2] : ''
+
+        return category && uuid ? `https://neodb.social/api/${category}/${uuid}` : ''
+      }
+
+      return `https://neodb.social/api/catalog/fetch?url=${encodeURIComponent(parsedUrl.toString())}`
+    }
+
+    const getNeoDBData = (fetchUrl: string) => {
+      return fetchJsonWithCache<NeoDBData>({
+        cacheName: 'neodb',
+        cacheKey: fetchUrl,
+        url: fetchUrl,
+        init: {
+          mode: 'cors',
+          headers: {
+            Accept: 'application/json'
+          }
+        },
+        transform: (json) => {
+          if (json && typeof json === 'object' && 'data' in json) {
+            const value = (json as { data?: unknown }).data
+
+            return value && typeof value === 'object' ? (value as NeoDBData) : {}
+          }
+
+          return json && typeof json === 'object' ? (json as NeoDBData) : {}
+        }
+      })
+    }
+
+    const toText = (value: unknown) => {
+      if (typeof value === 'string') {
+        return value.trim()
+      }
+
+      if (typeof value === 'number') {
+        return String(value)
+      }
+
+      return ''
+    }
+
+    const toTextList = (value: unknown) => {
+      const values = Array.isArray(value) ? value : [value]
+
+      return values.map(toText).filter(Boolean)
+    }
+
+    const getJoinedText = (value: unknown) => toTextList(value).join(', ')
+
+    const getFirstText = (value: unknown) => toTextList(value)[0] ?? ''
+
+    const fieldConfig: FieldConfig = {
+      movie: [
+        ['导演', (data) => getJoinedText(data.director)],
+        ['演员', (data) => getJoinedText(data.actor)],
+        ['类型', (data) => getJoinedText(data.genre)],
+        ['上映时间', (data) => toText(data.year)]
+      ],
+      tv: [
+        ['导演', (data) => getJoinedText(data.director)],
+        ['演员', (data) => getJoinedText(data.actor)],
+        ['类型', (data) => getJoinedText(data.genre)],
+        ['首播', (data) => toText(data.year)]
+      ],
+      'tv/season': [
+        ['导演', (data) => getJoinedText(data.director)],
+        ['演员', (data) => getJoinedText(data.actor)],
+        ['类型', (data) => getJoinedText(data.genre)],
+        ['首播', (data) => toText(data.year)]
+      ],
+      music: [
+        ['艺术家', (data) => getFirstText(data.artist)],
+        ['流派', (data) => getJoinedText(data.genre)],
+        ['发行时间', (data) => toText(data.release_date)]
+      ],
+      album: [
+        ['艺术家', (data) => getFirstText(data.artist)],
+        ['流派', (data) => getJoinedText(data.genre)],
+        ['发行时间', (data) => toText(data.release_date)]
+      ],
+      book: [
+        ['作者', (data) => getJoinedText(data.author)],
+        ['出版社', (data) => getJoinedText(data.publisher || data.pub_house || data.company)]
+      ],
+      game: [
+        ['开发者', (data) => getJoinedText(data.developer)],
+        ['类型', (data) => getJoinedText(data.genre)],
+        ['发行时间', (data) => toText(data.release_date)]
+      ],
+      podcast: [
+        ['主播', (data) => getJoinedText(data.host || data.artist || data.creator)],
+        ['类型', (data) => getJoinedText(data.genre)]
+      ]
+    }
+
+    const isLocalizedTitle = (value: unknown): value is LocalizedTitle => {
+      return Boolean(value && typeof value === 'object')
+    }
+
+    const findLocalizedTitle = (titles: unknown[], lang: string | null) => {
+      return titles.find((title): title is LocalizedTitle => {
+        if (!isLocalizedTitle(title) || !toText(title.text)) {
+          return false
+        }
+
+        return lang === null ? title.lang !== 'zh-cn' : title.lang === lang
+      })
+    }
+
+    const getPreferredTitle = (data: NeoDBData, category: string) => {
+      if (category === 'music' || category === 'album') {
+        const localizedTitles = Array.isArray(data.localized_title) ? data.localized_title : []
+        const nonZhTitle = findLocalizedTitle(localizedTitles, null)
+        const zhTitle = findLocalizedTitle(localizedTitles, 'zh-cn')
+
+        return toText(nonZhTitle?.text) || toText(zhTitle?.text) || toText(data.title || data.name)
+      }
+
+      return toText(data.title || data.name)
+    }
+
+    const getFieldInfo = (data: NeoDBData, category: string) => {
+      const fields = fieldConfig[category] ?? []
+
+      return fields.map(([label, getValue]) => [label, getValue(data)]).filter(([, value]) => value)
+    }
+
+    const createRating = (rating: unknown) => {
+      const ratingElement = createElement('div', 'rating')
+      const itemRating = Number.parseFloat(toText(rating))
+
+      if (Number.isFinite(itemRating) && itemRating > 0) {
+        const background = createElement('span', 'allstarbg')
+        const foreground = createElement('span', 'allstarfg')
+        const ratingNums = createElement('span', 'rating_nums')
+        const starPercentage = Math.max(0, Math.min(100, Math.round((itemRating / 10) * 10) * 10))
+
+        foreground.style.width = `${starPercentage}%`
+        ratingNums.textContent = itemRating.toFixed(1)
+        background.append(foreground)
+        ratingElement.append(background, ratingNums)
+
+        return ratingElement
+      }
+
+      ratingElement.append(createElement('span', 'allstargray'))
+      return ratingElement
+    }
+
+    const renderCard = (elem: HTMLElement, data: NeoDBData, targetUrl: string) => {
+      const safeTargetUrl = getSafeHttpUrl(targetUrl)
+
+      if (!safeTargetUrl) {
+        renderError(elem)
+        return
+      }
+
+      const cardData = data && typeof data === 'object' ? (data as NeoDBData) : {}
+      const category = toText(cardData.category)
+      const title = getPreferredTitle(cardData, category)
+      const coverUrl = getSafeHttpUrl(cardData.cover_image_url || cardData.cover_url)
+      const isSquare = category === 'music' || category === 'podcast'
+      const coverClass = isSquare ? 'music' : 'other'
+      const cardHeightClass = isSquare ? 'compact' : 'standard'
+      const card = createElement('a', `neodb-card ${cardHeightClass}`)
+      const info = createElement('div', 'neodb-info')
+      const titleElement = createElement('div', 'neodb-title')
+
+      card.href = safeTargetUrl
+      card.target = '_blank'
+      card.rel = 'noopener noreferrer'
+
+      if (coverUrl) {
+        const cover = createElement('img', `neodb-cover ${coverClass}`)
+
+        cover.src = coverUrl
+        cover.alt = title
+        cover.loading = 'lazy'
+        card.append(cover)
+      } else {
+        const cover = createElement('div', `neodb-cover ${coverClass}`)
+
+        cover.style.background = '#f3f4f6'
+        card.append(cover)
+      }
+
+      titleElement.textContent = title
+      info.append(titleElement, createRating(cardData.rating))
+
+      getFieldInfo(cardData, category).forEach(([label, value]) => {
+        const field = createElement('div', 'neodb-field')
+
+        field.textContent = `${label}: ${value}`
+        info.append(field)
+      })
+
+      card.append(info)
+      elem.replaceChildren(card)
+    }
+
+    const loadCard = async (container: HTMLElement) => {
+      const url = container.getAttribute('data-url')
+
+      if (!url) {
+        throw new Error('Missing NeoDB URL')
+      }
+
+      const fetchUrl = getNeoDBFetchUrl(url)
+
+      if (!fetchUrl) {
+        throw new Error('Invalid NeoDB URL')
+      }
+
+      const data = await getNeoDBData(fetchUrl)
+      renderCard(container, data, url)
+    }
+
+    setupLazyResources({
+      key: 'neodb-cards',
+      selector: '.neodb-card-container[data-url]',
+      stateKey: 'neodbState',
+      load: loadCard,
+      onError: renderError
+    })
+  }
+
+  initOnPageLoad('neodb-cards', loadNeoDBCards)
+</script>
+
+<style is:inline>
+  .prose .neodb-card {
+    width: 100%;
+    height: 100%;
+    background: var(--astro-code-background);
+    color: var(--text-primary);
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    text-decoration: none !important;
+    transition: background 0.2s ease-out;
+    margin: 1.25rem 0 1.75rem 0;
+    overflow: hidden;
+  }
+
+  .prose .neodb-card.compact {
+    min-height: 6rem;
+  }
+
+  .prose .neodb-card.standard {
+    min-height: 9rem;
+  }
+
+  .prose .neodb-card:hover {
+    background: color-mix(in srgb, var(--selection) 75%, transparent);
+  }
+
+  .prose .neodb-card.error:hover {
+    background: var(--astro-code-background) !important;
+    cursor: default;
+  }
+
+  .prose .neodb-cover {
+    width: 96px !important;
+    border-radius: 6px;
+    margin: 1rem;
+  }
+
+  .prose .neodb-cover.music {
+    height: 96px !important; /* 1:1 for music */
+  }
+
+  .prose .neodb-cover.other {
+    height: 144px !important; /* 9:16 for other types */
+  }
+
+  .prose .neodb-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .prose .neodb-field {
+    font-size: var(--font-size-s);
+    color: var(--text-primary);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .prose .neodb-artist {
+    font-size: var(--font-size-s);
+    color: var(--text-primary);
+  }
+
+  .prose .no-rating {
+    font-size: var(--font-size-s);
+    color: var(--text-primary);
+    line-height: 1;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .prose .neodb-title {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.35;
+    margin-bottom: 0.125rem;
+  }
+
+  .prose .neodb-title a {
+    text-decoration: none !important;
+  }
+
+  .prose .neodb-desc {
+    font-size: var(--font-size-s);
+    color: var(--text-primary);
+    margin-top: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .prose .rating {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-s);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .prose .rating .allstarbg {
+    position: relative;
+    color: #f99b01;
+    height: 1rem;
+    width: 5rem;
+    background-size: auto 100%;
+    margin-right: 0.25rem;
+    background-repeat: repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxwYXRoIGQ9Ik05MDguMSAzNTMuMWwtMjUzLjktMzYuOUw1NDAuNyA4Ni4xYy0zLjEtNi4zLTguMi0xMS40LTE0LjUtMTQuNS0xNS44LTcuOC0zNS0xLjMtNDIuOSAxNC41TDM2OS44IDMxNi4ybC0yNTMuOSAzNi45Yy03IDEtMTMuNCA0LjMtMTguMyA5LjMtMTIuMyAxMi43LTEyLjEgMzIuOS42IDQ1LjNsMTgzLjcgMTc5LjEtNDMuNCAyNTIuOWMtMS4yIDYuOS0uMSAxNC4xIDMuMiAyMC4zIDguMiAxNS42IDI3LjYgMjEuNyA0My4yIDEzLjRMNTEyIDc1NGwyMjcuMSAxMTkuNGM2LjIgMy4zIDEzLjQgNC40IDIwLjMgMy4yIDE3LjQtMyAyOS4xLTE5LjUgMjYuMS0zNi45bC00My40LTI1Mi45IDE4My43LTE3OS4xYzUtNC45IDguMy0xMS4zIDkuMy0xOC4zIDIuNy0xNy41LTkuNS0zMy43LTI3LTM2LjN6TTY2NC44IDU2MS42bDM2LjEgMjEwLjNMNTEyIDY3Mi43IDMyMy4xIDc3MmwzNi4xLTIxMC4zLTE1Mi44LTE0OUw0MTcuNiAzODIgNTEyIDE5MC43IDYwNi40IDM4MmwyMTEuMiAzMC43LTE1Mi44IDE0OC45eiIgZmlsbD0iI2Y5OWIwMSIvPjwvc3ZnPg==);
+  }
+
+  .prose .rating .allstarfg {
+    position: absolute;
+    left: 0;
+    color: #f99b01;
+    height: 1rem;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-repeat: repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxwYXRoIGQ9Ik05MDguMSAzNTMuMWwtMjUzLjktMzYuOUw1NDAuNyA4Ni4xYy0zLjEtNi4zLTguMi0xMS40LTE0LjUtMTQuNS0xNS44LTcuOC0zNS0xLjMtNDIuOSAxNC41TDM2OS44IDMxNi4ybC0yNTMuOSAzNi45Yy03IDEtMTMuNCA0LjMtMTguMyA5LjMtMTIuMyAxMi43LTEyLjEgMzIuOS42IDQ1LjNsMTgzLjcgMTc5LjEtNDMuNCAyNTIuOWMtMS4yIDYuOS0uMSAxNC4xIDMuMiAyMC4zIDguMiAxNS42IDI3LjYgMjEuNyA0My4yIDEzLjRMNTEyIDc1NGwyMjcuMSAxMTkuNGM2LjIgMy4zIDEzLjQgNC40IDIwLjMgMy4yIDE3LjQtMyAyOS4xLTE5LjUgMjYuMS0zNi45bC00My40LTI1Mi45IDE4My43LTE3OS4xYzUtNC45IDguMy0xMS4zIDkuMy0xOC4zIDIuNy0xNy41LTkuNS0zMy43LTI3LTM2LjN6IiBmaWxsPSIjZjk5YjAxIi8+PC9zdmc+);
+  }
+
+  .prose .rating_nums {
+    font-size: var(--font-size-s);
+    color: var(--text-primary);
+  }
+
+  .prose .rating .allstargray {
+    position: relative;
+    height: 1rem;
+    width: 5rem;
+    margin-right: 8px;
+    background-color: var(--text-primary);
+    opacity: 0.15;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxwYXRoIGQ9Ik05MDguMSAzNTMuMWwtMjUzLjktMzYuOUw1NDAuNyA4Ni4xYy0zLjEtNi4zLTguMi0xMS40LTE0LjUtMTQuNS0xNS44LTcuOC0zNS0xLjMtNDIuOSAxNC41TDM2OS44IDMxNi4ybC0yNTMuOSAzNi45Yy03IDEtMTMuNCA0LjMtMTguMyA5LjMtMTIuMyAxMi43LTEyLjEgMzIuOS42IDQ1LjNsMTgzLjcgMTc5LjEtNDMuNCAyNTIuOWMtMS4yIDYuOS0uMSAxNC4xIDMuMiAyMC4zIDguMiAxNS42IDI3LjYgMjEuNyA0My4yIDEzLjRMNTEyIDc1NGwyMjcuMSAxMTkuNGM2LjIgMy4zIDEzLjQgNC40IDIwLjMgMy4yIDE3LjQtMyAyOS4xLTE5LjUgMjYuMS0zNi45bC00My40LTI1Mi45IDE4My43LTE3OS4xYzUtNC45IDguMy0xMS4zIDkuMy0xOC4zIDIuNy0xNy41LTkuNS0zMy43LTI3LTM2LjN6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxwYXRoIGQ9Ik05MDguMSAzNTMuMWwtMjUzLjktMzYuOUw1NDAuNyA4Ni4xYy0zLjEtNi4zLTguMi0xMS40LTE0LjUtMTQuNS0xNS44LTcuOC0zNS0xLjMtNDIuOSAxNC41TDM2OS44IDMxNi4ybC0yNTMuOSAzNi45Yy03IDEtMTMuNCA0LjMtMTguMyA5LjMtMTIuMyAxMi43LTEyLjEgMzIuOS42IDQ1LjNsMTgzLjcgMTc5LjEtNDMuNCAyNTIuOWMtMS4yIDYuOS0uMSAxNC4xIDMuMiAyMC4zIDguMiAxNS42IDI3LjYgMjEuNyA0My4yIDEzLjRMNTEyIDc1NGwyMjcuMSAxMTkuNGM2LjIgMy4zIDEzLjQgNC40IDIwLjMgMy4yIDE3LjQtMyAyOS4xLTE5LjUgMjYuMS0zNi45bC00My40LTI1Mi45IDE4My43LTE3OS4xYzUtNC45IDguMy0xMS4zIDkuMy0xOC4zIDIuNy0xNy41LTkuNS0zMy43LTI3LTM2LjN6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+    -webkit-mask-size: auto 100%;
+    mask-size: auto 100%;
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+  }
+
+  /* Skeleton/Loading card styles */
+  .prose .neodb-loading.music {
+    min-height: 8rem !important;
+    background: var(--astro-code-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prose .neodb-loading.other {
+    min-height: 11rem !important;
+    background: var(--astro-code-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prose .neodb-error {
+    font-size: var(--font-size-m);
+    margin: 1.5rem;
+  }
+</style>

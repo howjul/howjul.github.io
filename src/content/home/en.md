@@ -1,0 +1,5 @@
+I am a second-year master's student with the State Key Laboratory of Blockchain and Data Security, Zhejiang University. I am fortunate to be advised by Prof. [Zhan Qin](https://scholar.google.com/citations?user=5fa4lOQAAAAJ). I also work closely with Dr. [Hongwei Yao](https://scholar.google.com/citations?user=gjMTPgkAAAAJ), a postdoctoral fellow at City University of Hong Kong, and Dr. [Yiming Li](https://scholar.google.com/citations?user=mSW7kU8AAAAJ), a research fellow at Nanyang Technological University. I received my B.Eng. degree in Information Security from Zhejiang University in 2025.
+
+My research interests primarily focus on **Trustworthy AI**. My previous work mainly addresses AI copyright protection, especially model ownership verification via fingerprinting. Currently, I am more focused on LLM agent security, particularly the attack and defense of indirect prompt injection and automated red-teaming.
+
+Outside research, I write things down as I learn: course notes live on my [notes site](https://howjul.github.io/note/) and [Yuque](https://www.yuque.com/howjul) (both in Chinese), and everything else goes here.
