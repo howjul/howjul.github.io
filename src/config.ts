@@ -17,6 +17,7 @@ export const themeConfig: ThemeConfig = {
     themeToggle: true, // Show theme toggle button (uses system theme by default)
     postListDottedDivider: false, // Show dotted divider in post list
     footer: true, // Show footer
+    visitorCounter: true, // Show visitor and view counts in the footer (vercount.one)
     fadeAnimation: true // Enable fade animations
   },
 

@@ -43,7 +43,9 @@ export const ui = {
     translation: 'English version',
     back: 'index',
     notFound: '页面不存在…',
-    noPosts: '还没有文章。'
+    noPosts: '还没有文章。',
+    visitors: '访客',
+    views: '浏览'
   },
   en: {
     about: 'About',
@@ -58,7 +60,9 @@ export const ui = {
     translation: '中文版',
     back: 'index',
     notFound: 'Page not found…',
-    noPosts: 'No posts yet.'
+    noPosts: 'No posts yet.',
+    visitors: 'Visitors',
+    views: 'Views'
   }
 } as const
 

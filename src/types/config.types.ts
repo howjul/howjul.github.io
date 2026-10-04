@@ -17,6 +17,7 @@ export interface GeneralSettings {
   themeToggle: boolean
   postListDottedDivider: boolean
   footer: boolean
+  visitorCounter: boolean
   fadeAnimation: boolean
 }
 

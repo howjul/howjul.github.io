@@ -1,9 +1,24 @@
 ---
 import { themeConfig } from '@/config'
+import { getLang, t } from '@/i18n'
+
 const today = new Date()
+const text = t(getLang(Astro.url.pathname))
+const showCounter = themeConfig.general.visitorCounter
 ---
 
 <footer>
+  {showCounter && (
+    <div class="stats">
+      <span>
+        {text.visitors} <span id="vercount_value_site_uv" />
+      </span>
+      <span class="sep">·</span>
+      <span>
+        {text.views} <span id="vercount_value_site_pv" />
+      </span>
+    </div>
+  )}
   <div class="footer-content">
     <div class="copyright">
       <span class="date">
@@ -17,6 +32,27 @@ const today = new Date()
     </div>
   </div>
 </footer>
+
+{showCounter && <script is:inline>
+  // Visitor counter (vercount.one). Its script is loaded again on every page view,
+  // including in-site navigation, so each page counts once. Skipped during local preview.
+  ;(function () {
+    if (window.__vercountBound) return
+    window.__vercountBound = true
+    var local = ['localhost', '127.0.0.1', '[::1]'].indexOf(location.hostname) !== -1
+    document.addEventListener('astro:page-load', function () {
+      if (local) return
+      var old = document.getElementById('vercount-script')
+      if (old) old.remove()
+      var s = document.createElement('script')
+      s.id = 'vercount-script'
+      s.defer = true
+      s.src = 'https://events.vercount.one/js'
+      document.body.appendChild(s)
+    })
+  })()
+</script>}
+
 <style>
   footer {
     font-size: var(--font-size-s);
@@ -25,6 +61,21 @@ const today = new Date()
     color: var(--text-secondary);
     opacity: 0.75;
     margin-top: 4rem;
+  }
+
+  .stats {
+    margin-bottom: 0.25rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Hidden until the numbers arrive, so the labels never show empty */
+  .stats:has(#vercount_value_site_uv:empty),
+  .stats:has(#vercount_value_site_pv:empty) {
+    visibility: hidden;
+  }
+
+  .stats .sep {
+    margin: 0 0.375rem;
   }
 
   .footer-content {
