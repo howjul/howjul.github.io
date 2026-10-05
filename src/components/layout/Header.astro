@@ -16,15 +16,17 @@ const altHref = Astro.props.altHref ?? switchLangPath(Astro.url.pathname)
 
 <header>
   <nav>
-    <a class="site-title" href={localePath(lang, '/')}>
-      {themeConfig.site.title}
-    </a>
+    <div class="brand">
+      <a class="site-title" href={localePath(lang, '/')}>
+        {themeConfig.site.title}
+      </a>
+      <a class="language-switch" href={altHref} aria-label={text.switchLabel}>
+        {text.switchTo}
+      </a>
+    </div>
     <div class="links">
       <a href={localePath(lang, '/about/')}>{text.about}</a>
       {noteSites.length > 0 && <a href={`${localePath(lang, '/')}#notes`}>{text.notes}</a>}
-      <a href={altHref} aria-label={text.switchLabel}>
-        {text.switchTo}
-      </a>
       {themeConfig.general.themeToggle && <ThemeToggle />}
     </div>
   </nav>
@@ -46,21 +48,25 @@ const altHref = Astro.props.altHref ?? switchLangPath(Astro.url.pathname)
     min-width: 3rem;
     display: inline-block;
   }
+  .brand,
   .links {
     display: flex;
     align-items: center;
     gap: 1.125rem;
   }
+  .language-switch,
   .links a {
     color: var(--text-secondary);
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.2s ease-out;
   }
+  .language-switch:hover,
   .links a:hover {
     color: var(--text-primary);
   }
   @media (max-width: 420px) {
+    .brand,
     .links {
       gap: 0.875rem;
     }

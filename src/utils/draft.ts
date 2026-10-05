@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
-import { DEFAULT_LANG, type Lang } from '@/i18n'
+import { type Lang } from '@/i18n'
 
 type Post = CollectionEntry<'posts'>
 
@@ -10,7 +10,7 @@ export function isDraft(id: string): boolean {
 
 /** Posts under `posts/en/` are English; everything else is Chinese. */
 export function postLang(id: string): Lang {
-  return id.startsWith('en/') ? 'en' : DEFAULT_LANG
+  return id.startsWith('en/') ? 'en' : 'zh'
 }
 
 /** Id of the same post in the other language (same filename). */

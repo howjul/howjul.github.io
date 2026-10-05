@@ -1,25 +1,30 @@
-// Language setup: Chinese is the default (served at `/`), English lives under `/en/`.
+// The homepage defaults to English at `/`, with Chinese at `/zh/`.
+// Other pages retain their existing URLs: English under `/en/`, Chinese unprefixed.
 
 export const LANGS = ['zh', 'en'] as const
 export type Lang = (typeof LANGS)[number]
-export const DEFAULT_LANG: Lang = 'zh'
+export const DEFAULT_LANG: Lang = 'en'
 
 export const HTML_LANG: Record<Lang, string> = { zh: 'zh-CN', en: 'en' }
 
-/** Language of a URL path: `/en/...` is English, everything else Chinese. */
+/** The root homepage and `/en/...` are English; other paths are Chinese. */
 export function getLang(pathname: string): Lang {
+  if (pathname === '/') return DEFAULT_LANG
   return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'zh'
 }
 
 /** Prefix a site path (e.g. `/about/`) for the given language. */
 export function localePath(lang: Lang, path = '/'): string {
   const clean = path.startsWith('/') ? path : `/${path}`
-  return lang === DEFAULT_LANG ? clean : `/en${clean}`
+  if (clean === '/') return lang === 'en' ? '/' : '/zh/'
+  return lang === 'zh' ? clean : `/en${clean}`
 }
 
 /** The same page in the other language (for pages that exist in both). */
 export function switchLangPath(pathname: string): string {
   const withSlash = pathname.endsWith('/') ? pathname : `${pathname}/`
+  if (withSlash === '/' || withSlash === '/en/') return '/zh/'
+  if (withSlash === '/zh/') return '/'
   if (getLang(withSlash) === 'en') return withSlash.replace(/^\/en/, '') || '/'
   return `/en${withSlash}`
 }
